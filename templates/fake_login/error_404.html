@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--[if lt IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+<![endif]-->
+{% if title %}
+      <title>{{ title }} - BankPass</title>
+      {% else %}
+      <title>BankPASS</title>
+{% endif %}
+</head>
+
+<body>
+    <div>
+        <!-- ------------ NAVBAR ---------------------- -->
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light " style="background-color: rgb(191, 191, 191);">
+            <!-- Container wrapper -->
+            <div class="container-fluid">
+                <!-- Toggle button -->
+                <button
+                class="navbar-toggler" type="button"
+                data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation" >
+                <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Navbar brand -->
+                
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    
+                    <li class="nav-item" style="font-size: 20px; font-weight:20px; ">
+                    <a class="nav-link" href="{{ url_for('home') }}">BANKPAS5</a>
+                    </li>
+                </ul>
+                <!-- Left links -->
+                </div>
+            </div>
+        
+            <!-- Container wrapper -->
+            </nav>
+        <!-- Navbar -->
+        {% block content %}
+
+            <div class="container">
+                <h1>404 ERROR!</h1>
+                <a class="nav-link" href="{{ url_for('real_login1') }}">click here to sign in again.</a>
+            </div>
+
+        {% endblock content %}
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
